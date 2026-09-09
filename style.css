@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #1f2937 0%, #0f172a 100%);
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.caixa-principal {
+  width: min(720px, 100%);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.18);
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  text-align: center;
+  color: #0f172a;
+}
+
+.caixa-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: #475569;
+  font-size: 0.98rem;
+}
+
+.progresso {
+  font-weight: 700;
+}
+
+.texto-resultado {
+  flex: 1 1 100%;
+  min-height: 1.5rem;
+}
+
+.caixa-perguntas {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #0f172a;
+}
+
+.caixa-alternativas {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.alternativa,
+.botao-reiniciar {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.alternativa {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
+  text-align: left;
+}
+
+.alternativa:hover,
+.alternativa:focus-visible {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.botao-reiniciar {
+  margin-top: 1.5rem;
+  background: #ffffff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.botao-reiniciar:hover,
+.botao-reiniciar:focus-visible {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .caixa-principal {
+    padding: 1.5rem;
+  }
+
+  .alternaiva,
+  .botao-reiniciar {
+    font-size: 0.95rem;
+  }
+}
